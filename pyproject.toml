@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airscout"
+version = "0.1.0"
+description = "Passive Wi-Fi reconnaissance, 802.11 analysis and security auditing CLI"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["wifi", "80211", "security", "audit", "scapy", "monitor-mode", "defensive"]
+dependencies = [
+    "scapy>=2.5.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+airscout = "airscout.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yourname/airscout"
+
+[tool.setuptools]
+packages = ["airscout"]
